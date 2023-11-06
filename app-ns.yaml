@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kargo-demo-test
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kargo-demo-uat
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kargo-demo-prod

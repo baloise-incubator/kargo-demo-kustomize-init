@@ -1,0 +1,50 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-demo-test
+  namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-demo:test
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
+    targetRevision: stage/test
+    path: stages/test
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kargo-demo-test
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-demo-uat
+  namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-demo:uat
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
+    targetRevision: stage/uat
+    path: stages/uat
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kargo-demo-uat
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-demo-prod
+  namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-demo:prod
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
+    targetRevision: stage/prod
+    path: stages/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kargo-demo-prod
