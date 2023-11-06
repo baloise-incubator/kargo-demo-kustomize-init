@@ -6,8 +6,8 @@ metadata:
 spec:
   subscriptions:
     - image:
-        repoURL: nginx
-        semverConstraint: ^1.24.0
+        repoURL: niiku/kargo-demo-app
+        semverConstraint: ^0.1.0
     - git:
         repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
         branch: master
