@@ -4,7 +4,7 @@ metadata:
   name: kargo-demo-test
   namespace: argocd
   annotations:
-    kargo.akuity.io/authorized-stage: kargo-demo:test
+    kargo.akuity.io/authorized-stage: kargo-demo-stages:test
 spec:
   project: default
   source:
@@ -21,7 +21,7 @@ metadata:
   name: kargo-demo-uat
   namespace: argocd
   annotations:
-    kargo.akuity.io/authorized-stage: kargo-demo:uat
+    kargo.akuity.io/authorized-stage: kargo-demo-stages:uat
 spec:
   project: default
   source:
@@ -38,7 +38,7 @@ metadata:
   name: kargo-demo-prod
   namespace: argocd
   annotations:
-    kargo.akuity.io/authorized-stage: kargo-demo:prod
+    kargo.akuity.io/authorized-stage: kargo-demo-stages:prod
 spec:
   project: default
   source:
