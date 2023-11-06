@@ -8,3 +8,7 @@ spec:
     - image:
         repoURL: nginx
         semverConstraint: ^1.24.0
+    - git:
+        repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
+        branch: master
+
