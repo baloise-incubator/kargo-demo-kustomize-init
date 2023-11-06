@@ -2,7 +2,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: test
-  namespace: kargo-demo-stages
+  namespace: kargo-demo-kustomize-stages
 spec:
   subscriptions:
     warehouse: kargo-demo
@@ -22,7 +22,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: uat
-  namespace: kargo-demo-stages
+  namespace: kargo-demo-kustomize-stages
 spec:
   subscriptions:
     upstreamStages:
@@ -43,7 +43,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prod
-  namespace: kargo-demo-stages
+  namespace: kargo-demo-kustomize-stages
 spec:
   subscriptions:
     upstreamStages:

@@ -2,7 +2,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Warehouse
 metadata:
   name: kargo-demo
-  namespace: kargo-demo-stages
+  namespace: kargo-demo-kustomize-stages
 spec:
   subscriptions:
     - image:
