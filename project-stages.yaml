@@ -5,10 +5,7 @@ metadata:
   namespace: kargo-demo-stages
 spec:
   subscriptions:
-    repos:
-      images:
-        - repoURL: nginx
-          semverConstraint: ^1.24.0
+    warehouse: kargo-demo
   promotionMechanisms:
     gitRepoUpdates:
       - repoURL: https://github.com/baloise-incubator/kargo-demo-kustomize.git
